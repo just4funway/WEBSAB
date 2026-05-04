@@ -5,7 +5,7 @@
 }
 
 html{
-  scroll-behavior:smooth;
+  scroll-behavior:auto;
 }
 
 .container {
@@ -180,9 +180,9 @@ html{
 }
 
 .content-section h2 {
-  font-size: 32px;
+  font-size: 70px;
   margin-bottom: 20px;
-  color: #222;
+  color:   #0072ff;;
 }
 
 .content-section p {

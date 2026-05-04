@@ -136,7 +136,7 @@
 <div id="popup1" class="popup">
   <div class="popup-content">
     <a href="#" class="close">&times;</a>
-    <img src="css/image/events/91.jpg" >
+    <img src="css/image/events/91.jpg">
   </div>
 </div>
 
@@ -237,6 +237,38 @@
     <img src="css/image/events/119.jpg" >
   </div>
 </div>
+
+<script>
+document.querySelectorAll('.close').forEach(btn => {
+  btn.addEventListener('click', () => {
+    window.location.hash = ''; 
+  });
+});
+
+document.querySelectorAll('.popup').forEach(popup => {
+  popup.addEventListener('click', function(e) {
+    if (e.target === popup) {
+      window.location.hash = ''; 
+    }
+  });
+});
+</script>
+
+<script>
+let lastScroll = 0;
+document.querySelectorAll('.card a').forEach(link => {
+  link.addEventListener('click', () => {
+    lastScroll = window.scrollY;
+  });
+});
+
+window.addEventListener('hashchange', () => {
+  if (!location.hash) {
+    window.scrollTo(0, lastScroll);
+  }
+});
+</script>
+
 
 <footer>
     <div class="f-container">

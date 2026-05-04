@@ -185,7 +185,7 @@ html{
 }
 
 .landing .text h1 {
-  color: rgb(242, 1, 255);
+  color:  #0072ff;
   font-size: 90px;
 }
 
@@ -608,10 +608,6 @@ header:hover {
   font-weight: bold;
   text-decoration: none;
   color: #888;
-}
-
-.close:hover {
-  color: red;
 }
 
 @keyframes fadeIn {

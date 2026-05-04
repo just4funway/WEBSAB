@@ -661,13 +661,35 @@
 </div>
 
 <script>
-    function openPopup(id) {
-      document.getElementById(id).style.display = "block";
+document.querySelectorAll('.close').forEach(btn => {
+  btn.addEventListener('click', () => {
+    window.location.hash = ''; 
+  });
+});
+
+document.querySelectorAll('.popup').forEach(popup => {
+  popup.addEventListener('click', function(e) {
+    if (e.target === popup) {
+      window.location.hash = ''; 
     }
-    function closePopup(id) {
-      document.getElementById(id).style.display = "none";
-    }
-  </script>
+  });
+});
+</script>
+
+<script>
+let lastScroll = 0;
+document.querySelectorAll('.card a').forEach(link => {
+  link.addEventListener('click', () => {
+    lastScroll = window.scrollY;
+  });
+});
+
+window.addEventListener('hashchange', () => {
+  if (!location.hash) {
+    window.scrollTo(0, lastScroll);
+  }
+});
+</script>
 
 <footer>
     <div class="f-container">
